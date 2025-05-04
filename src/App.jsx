@@ -7,6 +7,8 @@ import BgGradient from './components/common/BgGradient'
 import HeroSection from './components/home/HeroSection'
 import Footer from './components/common/Footer'
 
+// import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/clerk-react';
+
 function App() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
@@ -18,10 +20,10 @@ function App() {
           <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     </div>
-  )
+  );
 }
 
 export default App

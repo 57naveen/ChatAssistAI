@@ -49,7 +49,7 @@ const Header = () => {
 
      
         <div className='flex gap-2 items-center'>
-            <div>Pro</div>
+            {/* <div>Pro</div> */}
             <SignedIn>
               <UserButton />
             </SignedIn>
