@@ -30,12 +30,16 @@ const HeroSection = () => {
     <section className='relative mx-auto flex flex-col z-0 items-center justify-center py-16 sm:py-20 lg:pb-20 transition-all animate-in lg:px-12 max-w-7xl'>
        
             
-                <div className='relative p-[1px] overflow-hidden rounded-full bg-linear-to-r from-yellow-200 via-orange-500 to-yellow-800 animate-gradient-x group'>
+                <div className='relative p-[2px] overflow-hidden rounded-full bg-linear-to-r from-yellow-200 via-orange-500 to-yellow-800 animate-gradient-x group'>
                     <Badge
                     variant={'secondary'}
                     className='relative px-6 py-2 text-base font-medium bg-white rounded-full group-hover:bg-gray-50 transition-colors duration-200'
                     >
+                      <div>
+
+                   
                     <Sparkles className='h-6 w-6 mr-2 text-yellow-600 animate-pulse'/>
+                    </div>
                     <p className='text-base text-yellow-600'>Powered by AI</p>
                     </Badge>
                 </div>
