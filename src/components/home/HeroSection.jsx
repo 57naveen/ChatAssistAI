@@ -19,7 +19,9 @@ const HeroSection = () => {
     const handleClick = () => {
         if (!isSignedIn) {
           navigate('/sign-in');
-        } 
+        } else{
+          navigate('/chat-bot')
+        }
       };
     
     
