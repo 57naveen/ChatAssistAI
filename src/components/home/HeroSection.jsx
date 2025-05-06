@@ -12,16 +12,18 @@ import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
 
-    const { isSignedIn } = useAuth();
+    // const { isSignedIn } = useAuth();
     const navigate = useNavigate();
     
 
     const handleClick = () => {
-        if (!isSignedIn) {
-          navigate('/sign-in');
-        } else{
-          navigate('/chat-bot')
-        }
+        // if (!isSignedIn) {
+        //   navigate('/sign-in');
+        // } else{
+        //   navigate('/chat-bot')
+        // }
+
+        navigate('/chat-bot')
       };
     
     

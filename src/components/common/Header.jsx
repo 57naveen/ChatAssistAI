@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 import { SignedIn, SignedOut, UserButton } from '@clerk/clerk-react'
-import { FileText } from 'lucide-react'
+import { Brain, FileText } from 'lucide-react'
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
@@ -14,7 +14,7 @@ const Header = () => {
           <nav className='container flex items-center justify-between py-4 lg:px-8 px-2 mx-auto'>
       <div className='flex lg:flex-1'>
       <Link to="/" className='flex items-center gap-1 lg:gap-2 shrink-0'>
-       <FileText className='w-5 h-5 lg:w-8 lg:h-8 text-gray-900 hover:rotate-12 transform transition duration-200 ease-in-out    ' />
+       <Brain className='w-5 h-5 lg:w-8 lg:h-8 text-gray-900 hover:rotate-12 transform transition duration-200 ease-in-out   ' />
        <span className='font-extrabold lg:text-xl text-gray-900 transition-colors duration-200 hover:text-yellow-500'>Support AI</span> </Link>
       </div>
 

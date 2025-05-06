@@ -22,7 +22,8 @@ function App() {
           <Route path="/" element={<HeroSection/>} />
           <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
-          <Route path="/chat-bot" element={<ProtectedRoute><ChatBot/></ProtectedRoute>} />
+          {/* <Route path="/chat-bot" element={<ProtectedRoute><ChatBot/></ProtectedRoute>} /> */}
+          <Route path="/chat-bot" element={<ChatBot/>} />
         </Routes>
         <Footer />
       </div>
