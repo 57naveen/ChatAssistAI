@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
 import RecommendedCarousel from "./RecommendedCarousel";
+import { recommendedItems } from "@/utils/constants";
 
 const ChatBot = () => {
   const [messages, setMessages] = useState([
@@ -10,21 +11,8 @@ const ChatBot = () => {
   const chatRef = useRef(null);
   const [showRecommeded, setShowRecommeded] = useState(false)
 
-  const recommendedItems = [
-    "Filter Kit",
-    "Spare Motor",
-    "Oil Can",
-    "Air Compressor",
-    "Hydraulic Jack",
-    "Toolbox Set",
-    "Spark Plug",
-    "Cooling Fan",
-    "Brake Pads",
-    "Lubricant Spray",
-    "Replacement Hose",
-    "Wrench Kit",
-  ];
-
+  
+  
   const handleSend = () => {
     if (!input.trim()) return;
     const newMessages = [...messages, { role: "user", text: input }];
