@@ -37,7 +37,7 @@ const Howitworks = () => {
             />
           </div>
           <div className='text-center mb-16'>
-            <h2 className='font-bold text-xl uppercase mb-4 text-yellow-400'>How it works</h2>
+            <h2 className='font-bold text-xl uppercase mb-4 text-sky-400'>How it works</h2>
             <h3 className='font-bold text-3xl max-w-2xl mx-auto'>
               Get product support and smart suggestions in three simple steps
             </h3>
@@ -47,7 +47,7 @@ const Howitworks = () => {
                   <StepItem icon={step.icon} label={step.label} description={step.description} />
                   {idx < steps.length - 1 && (
                     <div className='hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10'>
-                      <MoveRight size={32} strokeWidth={1} className='text-yellow-400' />
+                      <MoveRight size={32} strokeWidth={1} className='text-sky-400' />
                     </div>
                   )}
                 </div>
@@ -64,15 +64,15 @@ function StepItem({ icon, label, description }) {
   return (
     <div
       className='relative p-6 rounded-2xl bg-white/5 backdrop-blur-xs
-        border border-white/10 hover:border-yellow-500 transition-colors group w-full'
+        border border-white/10 hover:border-sky-500 transition-colors group w-full'
     >
       <div className='flex flex-col gap-4 h-full'>
         <div
           className='flex items-center justify-center h-24 w-24
-                mx-auto rounded-2xl bg-linear-to-br from-yellow-500/10
-                to-transparent group-hover:from-yellow-500/20 transition-colors'
+                mx-auto rounded-2xl bg-linear-to-br from-sky-500/10
+                to-transparent group-hover:from-sky-500/20 transition-colors'
         >
-          <div className='text-yellow-500'>{icon}</div>
+          <div className='text-sky-500'>{icon}</div>
         </div>
         <div className='flex flex-col flex-1 gap-1 justify-between'>
           <h4 className='text-center font-bold text-xl'>{label}</h4>

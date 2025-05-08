@@ -21,12 +21,12 @@ const DemoSection = () => {
 
 <div className='flex flex-col items-center text-center space-y-4'>
     <div className='inline-flex items-center justify-center p-2 rounded-2xl bg-gray-100/80 backdrop-blur-xs border border-gray-500/20 mb-4'>
-    <MonitorPlay className='w-6 h-6 text-yellow-500'/>
+    <MonitorPlay className='w-6 h-6 text-blue-500'/>
     </div>
     <div className='text-center mb-16'>
        
     <h3 className='font-bold text-3xl max-w-2xl mx-auto px-4 sm:px-6'>
-    See how SupportAI helps <span className='bg-linear-to-r from-yellow-500 to-yellow-700 bg-clip-text text-transparent'>customers with real-time </span> queries and product tips.
+    See how SupportAI helps <span className='bg-linear-to-r from-sky-500 to-sky-700 bg-clip-text text-transparent'>customers with real-time </span> queries and product tips.
     </h3>
     </div>
 

@@ -32,7 +32,7 @@ const HeroSection = () => {
     <section className='relative mx-auto flex flex-col z-0 items-center justify-center py-16 sm:py-20 lg:pb-20 transition-all animate-in lg:px-12 max-w-7xl'>
        
             
-                <div className='relative p-[2px] overflow-hidden rounded-full bg-linear-to-r from-yellow-200 via-orange-500 to-yellow-800 animate-gradient-x group'>
+                <div className='relative p-[2px] overflow-hidden rounded-full bg-linear-to-r from-blue-200 via-sky-500 to-indigo-800 animate-gradient-x group'>
                     <Badge
                     variant={'secondary'}
                     className='relative px-6 py-2 text-base font-medium bg-white rounded-full group-hover:bg-gray-50 transition-colors duration-200'
@@ -40,9 +40,9 @@ const HeroSection = () => {
                       <div>
 
                    
-                    <Sparkles className='h-6 w-6 mr-2 text-yellow-600 animate-pulse'/>
+                    <Sparkles className='h-6 w-6 mr-2 text-sky-600 animate-pulse'/>
                     </div>
-                    <p className='text-base text-yellow-600'>Powered by AI</p>
+                    <p className='text-base text-sky-600'>Powered by AI</p>
                     </Badge>
                 </div>
                
@@ -61,8 +61,8 @@ const HeroSection = () => {
               <Button onClick={handleClick} variant={'link'}
               className='text-white mt-6 text-base sm:text-lg lg:text-xl
               rounded-full px=8 sm:px-10 lg:px-12 py-6 sm:py-7 lg:py-8
-              lg:mt-16 bg-linear-to-r from-slate-900 to-yellow-500
-              hover:from-yellow-500 hover:to-slate-900 hover:no-underline
+              lg:mt-16 bg-linear-to-r from-slate-900 to-sky-500
+              hover:from-sky-500 hover:to-slate-900 hover:no-underline
               font-bold shadow-lg transition-all duration-300'
               >
                 <Link  href="/#pricing" className='flex gap-2 items-center'>

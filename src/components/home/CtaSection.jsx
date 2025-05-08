@@ -46,8 +46,8 @@ const CtaSection = () => {
               <Button onClick={handleClick} variant={'link'}
               className='text-white mt-6 text-base sm:text-lg lg:text-xl
               rounded-full px=8 sm:px-10 lg:px-12 py-6 sm:py-7 lg:py-8
-              lg:mt-16 bg-linear-to-r from-slate-900 to-yellow-500
-              hover:from-yellow-500 hover:to-slate-900 hover:no-underline
+              lg:mt-16 bg-linear-to-r from-slate-900 to-sky-500
+              hover:from-sky-500 hover:to-slate-900 hover:no-underline
               font-bold shadow-lg transition-all duration-300'
               >
                 <Link  href="/#pricing" className='flex gap-2 items-center'>

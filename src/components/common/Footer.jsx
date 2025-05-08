@@ -17,10 +17,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-2">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="transition-colors duration-200 hover:text-yellow-500">Home</a></li>
-              <li><a href="#" className="transition-colors duration-200 hover:text-yellow-500">Features</a></li>
-              <li><a href="#" className="transition-colors duration-200 hover:text-yellow-500">Pricing</a></li>
-              <li><a href="#" className="transition-colors duration-200 hover:text-yellow-500">Contact</a></li>
+              <li><a href="#" className="transition-colors duration-200 hover:text-sky-500">Home</a></li>
+              <li><a href="#" className="transition-colors duration-200 hover:text-sky-500">Features</a></li>
+              <li><a href="#" className="transition-colors duration-200 hover:text-sky-500">Pricing</a></li>
+              <li><a href="#" className="transition-colors duration-200 hover:text-sky-500">Contact</a></li>
             </ul>
           </div>
 
@@ -28,9 +28,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-2">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="#" aria-label="Facebook" className="transition-colors duration-200 hover:text-yellow-500"><Facebook size={20} /></a>
-              <a href="#" aria-label="Twitter" className="transition-colors duration-200 hover:text-yellow-500"><Twitter size={20} /></a>
-              <a href="#" aria-label="LinkedIn" className="transition-colors duration-200 hover:text-yellow-500"><Linkedin size={20} /></a>
+              <a href="#" aria-label="Facebook" className="transition-colors duration-200 hover:text-sky-500"><Facebook size={20} /></a>
+              <a href="#" aria-label="Twitter" className="transition-colors duration-200 hover:text-sky-500"><Twitter size={20} /></a>
+              <a href="#" aria-label="LinkedIn" className="transition-colors duration-200 hover:text-sky-500"><Linkedin size={20} /></a>
             </div>
           </div>
         </div>
