@@ -83,7 +83,8 @@ const ChatBot = () => {
 
       {/* Recommended Section */}
       {showRecommeded && (
-        <div className="mt-20">
+        <div className="mt-10">
+         <p className="font-medium text-gray-700 flex justify-center items-center mb-3">Recommended for you:</p>
           <RecommendedCarousel items={recommendedItems} />
         </div>
       )}

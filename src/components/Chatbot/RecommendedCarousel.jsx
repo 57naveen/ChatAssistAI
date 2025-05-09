@@ -22,7 +22,7 @@ const RecommendedCarousel = ({ items }) => {
 
   return (
     <div className="relative h-[70vh] w-64 bg-white p-4 shadow-xl border border-gray-200 rounded-2xl ">
-      {/* <p className="font-medium text-gray-700 mb-3">Recommended for you:</p> */}
+      {/* <p className="font-medium text-gray-700 mt-5">Recommended for you:</p> */}
 
       {/* Popup */}
       {activeItem && (
