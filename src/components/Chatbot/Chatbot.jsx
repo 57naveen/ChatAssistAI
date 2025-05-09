@@ -11,19 +11,40 @@ const ChatBot = () => {
   const chatRef = useRef(null);
   const [showRecommeded, setShowRecommeded] = useState(false);
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (!input.trim()) return;
+
+    // Add user's message
     const newMessages = [...messages, { role: "user", text: input }];
     setMessages(newMessages);
     setInput("");
     setShowRecommeded(true);
 
-    setTimeout(() => {
+    // Add "typing..." indicator
+    setMessages([...newMessages, { role: "bot", text: "Typing..." }]);
+
+    try {
+      const res = await fetch(
+        "http://127.0.0.1:5000/api/processbusinesslogic",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: input }),
+        }
+      );
+
+      const data = await res.json();
+      const botReply = data.response || "Sorry, I couldn't understand that.";
+
+      // Replace "Typing..." with actual bot reply
+      setMessages([...newMessages, { role: "bot", text: botReply }]);
+    } catch (error) {
+      console.error("API Error:", error);
       setMessages([
         ...newMessages,
-        { role: "bot", text: "Thanks for your question! Here's a guide." },
+        { role: "bot", text: "Oops! Something went wrong. Please try again." },
       ]);
-    }, 800);
+    }
   };
 
   useEffect(() => {
@@ -32,11 +53,10 @@ const ChatBot = () => {
 
   return (
     <div className="w-full max-w-8xl mx-auto h-[85vh] mb-10 flex justify-around">
-      
       {/* Chat Section */}
       <div className="w-[75%] flex flex-col border border-gray-200 rounded-3xl shadow-xl bg-white overflow-hidden">
         <div className="bg-gradient-to-r from-sky-400 to-blue-500 text-white px-6 py-4 font-semibold text-lg rounded-t-3xl">
-           AI Assistant
+          AI Assistant
         </div>
 
         <div
@@ -84,7 +104,9 @@ const ChatBot = () => {
       {/* Recommended Section */}
       {showRecommeded && (
         <div className="mt-10">
-         <p className="font-medium text-gray-700 flex justify-center items-center mb-3">Recommended for you:</p>
+          <p className="font-medium text-gray-700 flex justify-center items-center mb-3">
+            Recommended for you:
+          </p>
           <RecommendedCarousel items={recommendedItems} />
         </div>
       )}
