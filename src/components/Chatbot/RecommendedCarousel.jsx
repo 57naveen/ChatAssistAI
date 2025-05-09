@@ -21,7 +21,7 @@ const RecommendedCarousel = ({ items }) => {
   const hoveredItem = hoveredIndex !== null ? items[hoveredIndex] : null;
 
   return (
-    <div className="relative h-[70vh] w-64 bg-white p-4 shadow-xl border border-gray-200 rounded-2xl ">
+    <div className="relative h-[83vh] w-64 bg-white p-4 shadow-xl border border-gray-200 rounded-2xl ">
       
 
       {/* Popup */}
@@ -69,7 +69,7 @@ const RecommendedCarousel = ({ items }) => {
       {/* Vertical Carousel */}
       <div
         ref={scrollRef}
-        className="flex flex-col gap-3 overflow-y-auto no-scrollbar h-[calc(100%-3rem)] mt-7 pr-1"
+        className="flex flex-col gap-3 overflow-y-auto no-scrollbar h-[calc(100%-3rem)] mt-6  pr-1"
       >
         {items.map((item, idx) => (
           <div
@@ -82,7 +82,7 @@ const RecommendedCarousel = ({ items }) => {
             <img
               src={item.image}
               alt={item.name}
-              className="w-[150px] h-[90px] object-contain mb-2 rounded "
+              className="w-[150px] h-[90px] object-contain  rounded "
             />
             <p className="font-bold">{item.name}</p>
           </div>

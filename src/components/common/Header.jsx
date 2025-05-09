@@ -10,73 +10,88 @@ const Header = () => {
 
 
   return (
-        <>
-          <nav className='container flex items-center justify-between py-4 lg:px-8 px-2 mx-auto'>
-      <div className='flex lg:flex-1'>
-      <Link to="/" className='flex items-center gap-1 lg:gap-2 shrink-0'>
-       {/* <Brain className='w-5 h-5 lg:w-8 lg:h-8 text-gray-900 hover:rotate-12 transform transition duration-200 ease-in-out   ' /> */}
-       {/* <span className='font-extrabold lg:text-xl text-gray-900 transition-colors duration-200 hover:text-yellow-500'>Support AI</span> */}
-       <img src='/images/logo.png' alt='logo'/>
-       </Link>
-       
-      </div>
+    <>
+  {/* Full-width nav, no padding/margin */}
+  <nav className="w-full flex items-center justify-between ">
 
-      <div className='flex lg:justify-center gap-4 lg:gap-12 lg:items-center'>
+    {/* Left Logo */}
+    <div className="flex items-center pl-0">
+      <Link to="/" className="flex items-center gap-2">
+        <img
+          src="/images/logo.png"
+          alt="logo"
+          className="w-44 h-24 lg:w-44 lg:h-20 mx-3 object-contain"
+        />
+      </Link> 
+    </div>
 
-      <Link
-        to="/instruction"
-        className={cn(
-          'transition-colors text-sm duration-200 text-gray-600 hover:text-sky-500',
-          location.pathname === '/instructions' && 'text-sky-500'
-        )}
-      >
-        Instructions
-      </Link>
-      <Link
-        to="/features"
-        className={cn(
-          'transition-colors text-sm duration-200 text-gray-600 hover:text-sky-500',
-          location.pathname === '/features' && 'text-sky-500'
-        )}
-      >
-        Features
-      </Link>
-      <Link
-        to="/about"
-        className={cn(
-          'transition-colors text-sm duration-200 text-gray-600 hover:text-sky-500',
-          location.pathname === '/about' && 'text-sky-500'
-        )}
-      >
-        About
-      </Link>
-        <SignedIn>
-       
-        </SignedIn>
-   
-      </div>
+    {/* Center Content */}
+   <div className="   px-64 py-2 flex justify-center items-center gap-6">
+  <Link
+    to="/instruction"
+    className={cn(
+      'text-[15px] px-6 py-1.5 rounded-full shadow-sm transition-all duration-200',
+      location.pathname === '/Manuals'
+        ? 'bg-sky-100 text-sky-700 shadow-md border-sky-300'
+        : 'bg-white text-gray-600 hover:bg-sky-50 hover:text-sky-600'
+    )}
+  >
+    Manuals
+  </Link>
 
-      <div className='flex lg:justify-end lg:flex-1'>
+  <Link
+    to="/features"
+    className={cn(
+      'text-[15px] px-6 py-1.5 rounded-full shadow-sm transition-all duration-200',
+      location.pathname === '/Tutorial'
+        ? 'bg-sky-100 text-sky-700 shadow-md border-sky-300'
+        : 'bg-white text-gray-600 hover:bg-sky-50 hover:text-sky-600'
+    )}
+  >
+    Tutorials
+  </Link>
 
-      <SignedIn>
+  <Link
+    to="/about"
+    className={cn(
+      'text-[15px] px-6 py-1.5 rounded-full  shadow-sm transition-all duration-200',
+      location.pathname === '/about'
+        ? 'bg-sky-100 text-sky-700 shadow-md border-sky-300'
+        : 'bg-white text-gray-600 hover:bg-sky-50 hover:text-sky-600'
+    )}
+  >
+    About
+  </Link>
+  <SignedOut>
+       <Link
+  to="/sign-in"
+  className="text-[15px] px-6 py-1.5 ml-28 text-nowrap  rounded-full text-gray-600 hover:text-white hover:bg-sky-500 hover:border-sky-500 shadow-sm transition-all duration-200"
+>
+  Sign In
+</Link>
+      </SignedOut>
+</div>
 
-     
-        <div className='flex gap-2 items-center'>
-            {/* <div>Pro</div> */}
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-       </div>
-       </SignedIn>
-        <SignedOut>
-        <Link className='hover:text-sky-500' to="/sign-in">Sign In</Link>
-        </SignedOut>
+    {/* Right Auth & Logo */}
+    <div className="flex items-center  pr-0">
+      <div className='mr-9'>
 
-        
     
-      </div>
-    </nav>
-        </>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+        </div>
+      
+
+      {/* Right Logo 2 */}
+      <img
+        src="/images/logo.png"
+        alt="logo-2"
+        className="w-40 h-20 lg:w-40 lg:h-20 mr-7 object-contain"
+      />
+    </div>
+  </nav>
+</>
   )
 }
 
